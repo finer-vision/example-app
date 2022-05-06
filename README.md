@@ -5,7 +5,7 @@ Test Next.js app with our Docker config.
 ### Building Docker Image
 
 ```shell
-docker build cms \ 
+docker build . \ 
   --no-cache \ 
   -f Dockerfile \ 
   -t example/client \ 
