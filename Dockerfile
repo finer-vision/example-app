@@ -1,11 +1,12 @@
 FROM ubuntu:20.04
 
-RUN apt-get update -y --fix-missing
-RUN apt-get install -y --fix-missing curl build-essential python gcc g++
+RUN apt clean -y
+RUN apt update -y
+RUN apt install -y curl build-essential python gcc g++
 
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 
-RUN apt-get install -y --fix-missing nodejs jq
+RUN apt install -y nodejs jq
 
 COPY . /usr/app
 
